@@ -1,0 +1,13 @@
+# Firmware
+firmware/.pio/
+firmware/.vscode/
+# WLAN-Passwort nicht committen -- stattdessen config.example.h pflegen
+firmware/src/config.h
+
+# Proxy
+proxy/node_modules/
+# SSH-Keys NIEMALS committen
+proxy/keys/*
+!proxy/keys/README.md
+# echte .env nicht committen -- .env.example als Vorlage bleibt im Repo
+proxy/.env

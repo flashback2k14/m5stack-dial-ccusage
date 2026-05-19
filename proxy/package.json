@@ -1,0 +1,14 @@
+{
+  "name": "dial-usage-proxy",
+  "version": "1.0.0",
+  "description": "Liefert Claude-Usage-Daten (via ccusage) als dial-freundliches JSON fuer das M5Dial.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,15 @@
+services:
+  dial-usage-proxy:
+    build: .
+    container_name: dial-usage-proxy
+    restart: unless-stopped
+    ports:
+      - "8088:8088"
+    # Alle Einstellungen kommen aus der .env-Datei.
+    # Vorlage: cp .env.example .env  und dann anpassen.
+    env_file:
+      - .env
+    volumes:
+      # Dedizierter, passwortloser SSH-Key. Read-only gemountet.
+      # Erzeugen mit:  ssh-keygen -t ed25519 -f ./keys/id_dial -N ""
+      - ./keys:/keys:ro
